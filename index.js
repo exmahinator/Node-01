@@ -17,7 +17,6 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
     case "list":
       const allContacts = await contactsOperations.listContacts();
-      //   console.log("Your list of contacts:", allContacts);
       console.log("Your list of contacts:");
       console.table(allContacts);
       break;
@@ -60,13 +59,3 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
 };
 
 invokeAction(argv);
-
-// invokeAction({ action: "list" });
-// invokeAction({ action: "remove", id: "11" });
-// invokeAction({ action: "get", id: "10" });
-// invokeAction({
-//   action: "add",
-//   name: "Someone",
-//   email: "someEmail@smile.com",
-//   phone: "(888) 888 8888",
-// });

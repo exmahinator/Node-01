@@ -2,13 +2,6 @@ const fs = require("fs/promises");
 const path = require("path");
 const ObjectID = require("bson-objectid");
 
-// const {nanoid} = require("nanoid"); --- не працює з require!!
-// const customId = nanoid.customAlphabet("1234567890", 10);
-
-// const contactsPath = path.basename(
-//   "D:\\GitHub_Projects\\Node\\Node-01\\db\\contacts.json"
-// );
-
 const contactsPath = path.join(__dirname, "db/contacts.json");
 
 const updateContacts = async (contacts) => {
