@@ -17,7 +17,9 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
     case "list":
       const allContacts = await contactsOperations.listContacts();
-      console.log("Your list of contacts:", allContacts);
+      //   console.log("Your list of contacts:", allContacts);
+      console.log("Your list of contacts:");
+      console.table(allContacts);
       break;
     case "get":
       const contactById = await contactsOperations.getContactById(id);
@@ -38,9 +40,9 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
         break;
       }
       console.log(
-        `The contact with ID ${id} has been successfully deleted. Your new list of contacts is:`,
-        newContactsList
+        `The contact with ID ${id} has been successfully deleted. Your new list of contacts is:`
       );
+      console.table(newContactsList);
       break;
     case "add":
       const newContact = await contactsOperations.addContact(
