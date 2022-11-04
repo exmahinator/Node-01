@@ -6,15 +6,16 @@ Add new contact: https://ibb.co/XL9YwHv
 
 Remove contact: https://ibb.co/jVYywKy
 
+Список команд, які були використані у консолі GitBash де розміщувався репозиторій відповідно до ТЗ по ДЗ:
 
-# Отримуємо і виводимо весь список контактів у вигляді таблиці (console.table)
+1) Отримуємо і виводимо весь список контактів у вигляді таблиці (console.table)
 node index.js --action="list"
 
-# Отримуємо контакт по id
+2) Отримуємо контакт по id
 node index.js --action="get" --id=5
 
-# Додаємо контакт
+3) Додаємо контакт
 node index.js --action="add" --name="Mango" --email="mango@gmail.com" --phone="322-22-22"
 
-# Видаляємо контакт
+4) Видаляємо контакт
 node index.js --action="remove" --id=3
